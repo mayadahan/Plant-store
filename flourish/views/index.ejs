@@ -1,0 +1,19 @@
+<%- include('layouts/header.ejs')%>
+<title>Register</title>
+    <form action="/signup" method="post" class="m-2" style="margin-top: 10% !important;">
+        <div class="form-group container col-md-4 text-center formdiv">
+            <% if (message.length > 0){%>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <%=message%>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <%}%>
+            <h2 class="pt-3 loginH2">Register</h2>
+            <input class="form-control mb-3" name="username" type="text" placeholder="username" required>
+            <input class="form-control mb-3" name="password" type="password" placeholder="password" required>
+            <button class="btn btn-primary mb-3" type="submit">Signup</button>
+        </div>
+    </form>
+<%- include('layouts/footer.ejs')%>

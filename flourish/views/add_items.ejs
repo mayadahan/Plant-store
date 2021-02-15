@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+          integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Add Items</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navcustom sticky-top">
+    <div id="logo">
+        <a href="/"><img class="logo-img" src="/images/logo.png"/></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a id="cart" class="nav-link" href="/cartitems"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">User Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin">All Items</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/additems">Add Items</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout/user">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--<form action="/additems" method="post" class="m-2 additems">-->
+<!--    <div class="form-group container col-md-4 text-center">-->
+<!--        <input name="itemName" class="form-control m-1" type="text" placeholder="item name">-->
+<!--        <input name="itemPrice" class="form-control m-1" type="text" placeholder="item price">-->
+<!--        <button class="form-control m-1 btn btn-primary col-sm-4" type="submit">Add Item</button>-->
+<!--    </div>-->
+<!--</form>-->
+
+<form action="/additems" method="post" class="" style="margin-top: 7% !important;" enctype="multipart/form-data">
+    <div class="form-group container col-md-4 text-center formdiv">
+        <h2 class="pt-3 loginH2">Add Items</h2>
+        <input name="itemName" class="form-control mb-3" type="text" placeholder="item name" required>
+        <textarea name="itemdescription" class="form-control mb-3" type="text" placeholder="item description" rows="3" style="resize: none" required></textarea>
+        <input name="itemPrice" class="form-control mb-3" type="text" placeholder="item price" required>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Upload Thumbnail</label>
+            <input name="myImage" type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <button class="btn btn-primary mb-3 btn-cart" type="submit">Add Item</button>
+    </div>
+</form>
+
+
+<%- include('layouts/footer.ejs') %>

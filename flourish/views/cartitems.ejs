@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+          integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Cart Items</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navcustom sticky-top">
+    <div id="logo">
+        <a href="/"><img class="logo-img" src="/images/logo.png"/></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto" id="navoptions">
+            <li class="nav-item active">
+                <a id="cart" class="nav-link" href="/cartitems">CART(0)</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/dashboard">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/toppicks">Top Picks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout/user">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<table class="table table-fixed">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total</th>
+    </tr>
+    </thead>
+    <tbody id="tabledata">
+    <tr>
+
+    </tr>
+    </tbody>
+</table>
+<div class="container d-flex">
+    <button class="btn btn-success checkoutbtn" onclick="checkout()"> Check Out</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="scripts/cartitems.js"></script>
+<script src="scripts/navcart.js" defer></script>
+<%- include('layouts/footer.ejs') %>

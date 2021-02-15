@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lobster&display=swap');
+body{
+    font-family: 'Arvo', serif;
+    font-size: 2rem;
+    background-color: #eef2f3;
+}
+
+.logo{
+    font-size: 1.5em;
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+
+.logo-img {
+    border-radius: 50%;
+    width: 200px;
+    margin: 50px;
+}
+
+.logoIcon{
+    font-size: 1.5em;
+    color: #10c360;
+    /*font-family: 'Lobster', cursive;*/
+}
+
+.logoSearch{
+    color: black !important;
+    font-size: 1.5rem;
+}
+
+.additems{
+    background-color: #10c360;
+    padding: 0.5rem 0.5rem;
+}
+
+button{
+    background-color: #2e4e3d  !important;
+    color: white !important;
+    border: none !important;
+    width: 5rem;
+    height: 2.5rem;
+}
+
+button:hover{
+    background-color: #778d81!important;
+    color: black !important;
+}
+
+.checkoutbtn{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.desc{
+    font-size: 1rem !important;
+}
+
+.formdiv{
+    /*background-color: lightgreen;*/
+    /*border-radius: 2rem;*/
+    border-left: 7px solid #778d81;
+    border-right: 7px solid #778d81;
+}
+
+input{
+    border: 2px solid #778d81 !important;
+}
+
+.loginH2{
+    color: #5b7e6b;
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+}
+
+label{
+    color: #778d81 !important;
+}
+
+.navcustom{
+    background-image: url("/images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    position:relative;
+    width:inherit;
+}
+
+#navbarNav{
+    display: inline !important;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color:  rgb(133, 130, 130);
+}
+
+.btn-cart{
+    width: 9rem;
+}
+
+textarea{
+    border: 2px solid #778d81 !important;
+}
+
+.welcome{
+    font-family: 'Lobster', cursive;
+
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration page</title>
+    <link href="style1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header">
+        <table>
+            <tr>
+                <td>
+                    <div id="logo">
+                        <a href="/"><img class="logo-img" src="/images/logo.png"/></a>
+                    </div>
+                </td>
+                <td>
+                    <nav>
+                        <ul>                            
+                            <li class="nav-item active"><a id="cart" class="nav-link" href="/cartitems"></a></li>
+                            <li class="nav-item active"><a href="/dashboard">Shop</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/additems">Add Items</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/logout/user">Logout</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </div>
+<center>
+    <form action="/" method="post" style="font-family: 'Gayathri', sans-serif;">
+        <% if (message.length > 0){ %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%= message %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <% } %>
+        <div class="container">
+            <h1>Register</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+
+            <input class="form-control mb-3" name="username" type="text" placeholder="username" required>
+            <input class="form-control mb-3" name="password" type="password" placeholder="password" required>
+            <button class="registerbtn" type="submit">Submit</button>
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="/login">Sign in</a>.</p>
+        </div>
+    </form>
+</center>
+
+<div class="footer">
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <a href="https://www.facebook.com/dahanmaya/"><img style="margin-top: 10px;" Facebook" height="32"
+                        src="https://marketing-image-production.s3.amazonaws.com/uploads/ff9976df4a238185e8b04c049167edb67da4114ae06d92f1025ceaf6ba0fce7c90717e0cfefa7978ea756664c3e8ed1f55aabf17204450aa34bf004f02cf4eac.png"
+                        title="Facebook" width="32"></a>
+                </td>
+                <td>
+                    <a href="https://www.instagram.com/mayadahan/"><img style="margin-top: 10px;" alt="Instagram"
+                                                                        height="35"
+                                                                        src="https://image.flaticon.com/icons/png/512/87/87390.png"
+                                                                        title="Instagram" width="35"></a>
+                </td>
+            </tr>
+        </table>
+        <p style="margin: 0px; "><span style="color: #0F0E0E; font-size: 14px;">
+            Copyright &copy; 2020 Maya Dahan and Tal Goldstein, All rights reserved.
+            </span></p>
+        </center>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

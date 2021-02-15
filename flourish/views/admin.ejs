@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+          integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Admin</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navcustom sticky-top">
+    <div id="logo">
+        <a href="/"><img class="logo-img" src="/images/logo.png"/></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto" id="navoptions">
+            <li class="nav-item active">
+                <a id="cart" class="nav-link" href="/cartitems"></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/dashboard">User Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin">All Items</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/additems">Add Items</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout/user">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div style="text-align: center">
+    <table class="table table-fixed table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Password</th>
+            <th scope="col">Last Login</th>
+            <th scope="col">Purchases (total amounts)</th>
+        </tr>
+        </thead>
+        <tbody id="tabledata">
+<!--        <tr>-->
+            <% for(let i = result.length - 1; i >= 0; i--){ %>
+                <tr>
+                    <th><%=result.length-i%></th>
+                    <td><%= result[i].name %></td>
+                    <td><%= result[i].password%></td>
+                    <td><%= result[i].last_login%></td>
+                    <td>
+                        <ul>
+                            <%if(result[i].purchases != undefined){%>
+                                <% for(let j = JSON.parse(result[i].purchases).length - 1; j >= 0; j--){ %>
+                                <li>$<%=JSON.parse(result[i].purchases)[j].amount%></li>
+                                <%}%>
+                            <%}%>
+                        </ul>
+                    </td>
+                </tr>
+            <%}%>
+        </tbody>
+    </table>
+</div>
+<script src="../node_modules/fuse.js/dist/fuse.js"></script>
+<script src="scripts/navcart.js" defer></script>
+<%- include('layouts/footer.ejs') %>
